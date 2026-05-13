@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Connect with NeuNuc</title>
+    <meta
+      name="description"
+      content="Connect with NeuNuc for cognitive infrastructure, operator-grade documentation, federal support, SOW scoping, Nucord, and implementation routing."
+    />
+    <meta property="og:title" content="Connect with NeuNuc" />
+    <meta
+      property="og:description"
+      content="Route your request into the right NeuNuc lane: systems mapping, SOWs, federal support, Discord/Nucord builds, or client handoff."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0b1020" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero" id="top">
+        <div class="eyebrow">connect.neunuc.dev</div>
+        <h1>Connect with NeuNuc.</h1>
+        <p class="lede">
+          Route your request into the right lane: cognitive infrastructure, SOW scoping,
+          federal support, operator documentation, Nucord, or client handoff.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#intake">Start intake</a>
+          <a class="button secondary" href="#routes">Pick a lane</a>
+        </div>
+      </header>
+
+      <section class="notice" aria-label="routing note">
+        <strong>Use this hub when the next step is unclear.</strong>
+        NeuNuc will sort the signal, identify the right surface, and turn messy notes into
+        usable systems, scopes, or implementation paths.
+      </section>
+
+      <section class="section" id="routes">
+        <div class="section-heading">
+          <p class="eyebrow">routing lanes</p>
+          <h2>Choose the closest fit.</h2>
+        </div>
+
+        <div class="grid cards">
+          <article class="card">
+            <span class="tag">FM-01</span>
+            <h3>Map a broken workflow</h3>
+            <p>
+              Find interpretive friction, classification failures, cognitive-load spikes,
+              duplicated effort, and operational handoff breakdowns.
+            </p>
+            <a href="#intake" data-lane="Workflow friction map">Start this lane</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">CI-02</span>
+            <h3>Design cognitive infrastructure</h3>
+            <p>
+              Convert chaos into decision architecture, workflow clarity, harm-reduction
+              protocols, and implementation-ready system maps.
+            </p>
+            <a href="#intake" data-lane="Cognitive infrastructure blueprint">Start this lane</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">SOW</span>
+            <h3>Request a SOW</h3>
+            <p>
+              Turn rough notes, emails, RFP excerpts, ideas, or client asks into a structured
+              statement of work and internal scoping package.
+            </p>
+            <a href="#intake" data-lane="SOW request">Start this lane</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Federal</span>
+            <h3>Federal or procurement support</h3>
+            <p>
+              Route SAM.gov, SBIR, capability statement, compliance matrix, and proposal
+              support requests into a clean capture path.
+            </p>
+            <a href="#intake" data-lane="Federal/procurement support">Start this lane</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Nucord</span>
+            <h3>Build a Discord/community system</h3>
+            <p>
+              Scope Nucord bots, Discord onboarding, embedded activities, AI agents,
+              moderation flows, rituals, games, and community operations.
+            </p>
+            <a href="#intake" data-lane="Nucord/community system">Start this lane</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Client</span>
+            <h3>Existing client handoff</h3>
+            <p>
+              Send project links, deliverable notes, status updates, upload needs, and next
+              action requests to the operator queue.
+            </p>
+            <a href="#intake" data-lane="Existing client handoff">Start this lane</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split" id="intake">
+        <div>
+          <p class="eyebrow">intake</p>
+          <h2>Drop the signal here.</h2>
+          <p>
+            This form creates a structured mailto packet. It does not store data on the page.
+            Add the messy version; NeuNuc will normalize it into the right system path.
+          </p>
+          <ul class="checklist">
+            <li>Paste rough notes, RFP excerpts, links, or context.</li>
+            <li>Pick the nearest lane; exact classification can be corrected later.</li>
+            <li>Keep sensitive credentials out of this form.</li>
+          </ul>
+        </div>
+
+        <form class="panel" id="intake-form">
+          <label>
+            Name
+            <input name="name" autocomplete="name" placeholder="Your name" />
+          </label>
+
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" placeholder="you@example.com" />
+          </label>
+
+          <label>
+            Organization / project
+            <input name="org" placeholder="Organization, project, or community" />
+          </label>
+
+          <label>
+            Lane
+            <select name="lane" id="lane-select">
+              <option>Workflow friction map</option>
+              <option>Cognitive infrastructure blueprint</option>
+              <option>SOW request</option>
+              <option>Federal/procurement support</option>
+              <option>Nucord/community system</option>
+              <option>Existing client handoff</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+
+          <label>
+            What needs to be built, fixed, mapped, or routed?
+            <textarea
+              name="notes"
+              rows="7"
+              placeholder="Paste the messy version here. Include deadlines, links, stakeholders, constraints, or target outcomes."
+            ></textarea>
+          </label>
+
+          <label class="consent">
+            <input name="consent" type="checkbox" required />
+            I consent to NeuNuc reviewing this intake and contacting me about next steps.
+          </label>
+
+          <button class="button primary full" type="submit">Prepare intake email</button>
+          <p class="form-note" id="form-status" role="status"></p>
+        </form>
+      </section>
+
+      <section class="section matrix" aria-label="surface map">
+        <div class="section-heading">
+          <p class="eyebrow">surface map</p>
+          <h2>Where this routes.</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Need</th>
+                <th>NeuNuc output</th>
+                <th>Likely next artifact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Workflow is confusing or overloaded</td>
+                <td>Friction map + cognitive-load summary</td>
+                <td>FM-01 diagnostic package</td>
+              </tr>
+              <tr>
+                <td>System needs redesign</td>
+                <td>Decision architecture + blueprint</td>
+                <td>CI-02 implementation map</td>
+              </tr>
+              <tr>
+                <td>Scope needs to become client-safe</td>
+                <td>SOW + internal scoping notes</td>
+                <td>Client-ready scope package</td>
+              </tr>
+              <tr>
+                <td>Federal opportunity needs response structure</td>
+                <td>Capture notes + compliance/support sections</td>
+                <td>Proposal shell or evidence pack</td>
+              </tr>
+              <tr>
+                <td>Discord/community needs infrastructure</td>
+                <td>Nucord route map + bot/system scope</td>
+                <td>Runtime backlog or build PR</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>
+          <strong>NeuNuc</strong>
+          <p>Cognitive infrastructure, operator-grade documentation, and implementation systems.</p>
+        </div>
+        <nav aria-label="footer links">
+          <a href="#top">Top</a>
+          <a href="#routes">Routes</a>
+          <a href="#intake">Intake</a>
+          <a href="mailto:mystical@mystical.codes">Email</a>
+        </nav>
+      </footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
